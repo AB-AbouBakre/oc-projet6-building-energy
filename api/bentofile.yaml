@@ -1,0 +1,22 @@
+service: "service:BuildingEnergyService"
+
+labels:
+  owner: "A. ABOU-BAKRE"
+  project: "Projet 6 - Anticipez les besoins en consommation de bâtiments"
+  stage: "prototype"
+  model: "GradientBoostingRegressor"
+  target: "SiteEnergyUse_kBtu"
+
+include:
+  - "service.py"
+
+models:
+  - "building_energy_model:buwe3fc7d6v7ldef"
+
+python:
+  packages:
+    - bentoml
+    - scikit-learn==1.8.0
+    - pandas
+    - numpy
+    - pydantic
